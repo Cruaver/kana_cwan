@@ -5,8 +5,9 @@ import random
 import datetime
 
 client = discord.Client()
-timestamp = str(datetime.datetime.now().strftime("%Y-%m-%d")) + " " + str(datetime.datetime.now().hour + 2) + ":" + str(
-    datetime.datetime.now().minute)
+minute = str(datetime.datetime.now().minute)
+timestamp = str(datetime.datetime.now().strftime("%Y-%m-%d")) + " " + str(datetime.datetime.now().hour + 2) + ":" + \
+            minute
 
 
 @client.event
