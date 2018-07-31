@@ -5,6 +5,8 @@ import random
 import datetime
 
 client = discord.Client()
+timestamp = datetime.datetime.now().strftime("%Y-%m-%d") + " " + str(datetime.datetime.now().hour + 2) + ":" + str(
+    datetime.datetime.now())
 
 
 @client.event
@@ -42,7 +44,7 @@ async def on_message(message):
                          url="https://discordapp.com/oauth2/authorize?client_id=469088879207514132&scope=bot",
                          icon_url="https://cdn.discordapp.com/avatars/222139815980695552"
                                   "/ecb5a324d354fcfe92ba3e2ae99b32df.png?size=2048")
-        embed.set_footer(text=datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
+        embed.set_footer(text=timestamp,
                          icon_url="https://scontent-ams3-1.cdninstagram.com/vp/8ec180462bdc5f880ae2f908b43b0ccf"
                                   "/5BDC9FCF/t51.2885-19/s320x320/26065436_154405111872446_8536586386604556288_n.jpg")
 
@@ -75,7 +77,7 @@ async def on_message(message):
                          url="https://discordapp.com/oauth2/authorize?client_id=469088879207514132&scope=bot",
                          icon_url="https://cdn.discordapp.com/avatars/222139815980695552"
                                   "/ecb5a324d354fcfe92ba3e2ae99b32df.png?size=2048")
-        embed.set_footer(text=datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
+        embed.set_footer(text=timestamp,
                          icon_url="https://scontent-ams3-1.cdninstagram.com/vp/8ec180462bdc5f880ae2f908b43b0ccf"
                                   "/5BDC9FCF/t51.2885-19/s320x320/26065436_154405111872446_8536586386604556288_n.jpg")
 
@@ -100,7 +102,7 @@ async def on_message(message):
                          url="https://discordapp.com/oauth2/authorize?client_id=469088879207514132&scope=bot",
                          icon_url="https://cdn.discordapp.com/avatars/244807977373138956"
                                   "/df627cfadbc07dcc72c85ee83ff69a78.png?size=2048")
-        embed.set_footer(text=datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
+        embed.set_footer(text=timestamp,
                          icon_url="https://cdn.discordapp.com/icons/289845545151889408"
                                   "/25a4223c378f0bea5ff1c743af739e14.png")
 
