@@ -24,6 +24,7 @@ async def my_background_task():
         await client.send_message(channel, "No fake")
         await asyncio.sleep(5)
 
+
 @client.event
 async def on_message(message):
     if message.author == client.user:
@@ -41,7 +42,7 @@ async def on_message(message):
                          url="https://discordapp.com/oauth2/authorize?client_id=469088879207514132&scope=bot",
                          icon_url="https://cdn.discordapp.com/avatars/222139815980695552"
                                   "/ecb5a324d354fcfe92ba3e2ae99b32df.png?size=2048")
-        embed.set_footer(text=datetime.datetime.now.strftime("%Y-%m-%d %H:%M"),
+        embed.set_footer(text=datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
                          icon_url="https://scontent-ams3-1.cdninstagram.com/vp/8ec180462bdc5f880ae2f908b43b0ccf"
                                   "/5BDC9FCF/t51.2885-19/s320x320/26065436_154405111872446_8536586386604556288_n.jpg")
 
@@ -74,7 +75,7 @@ async def on_message(message):
                          url="https://discordapp.com/oauth2/authorize?client_id=469088879207514132&scope=bot",
                          icon_url="https://cdn.discordapp.com/avatars/222139815980695552"
                                   "/ecb5a324d354fcfe92ba3e2ae99b32df.png?size=2048")
-        embed.set_footer(text=datetime.datetime.now.strftime("%Y-%m-%d %H:%M"),
+        embed.set_footer(text=datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
                          icon_url="https://scontent-ams3-1.cdninstagram.com/vp/8ec180462bdc5f880ae2f908b43b0ccf"
                                   "/5BDC9FCF/t51.2885-19/s320x320/26065436_154405111872446_8536586386604556288_n.jpg")
 
@@ -88,7 +89,7 @@ async def on_message(message):
 
         await client.send_message(message.channel, content="**RÈGLEMENT**", embed=embed)
 
-    if message.content.startswith('!GR_Rendu'):
+    elif message.content.startswith('!GR_Rendu'):
         embed = discord.Embed(colour=discord.Colour(0xff0000),
                               url="https://discordapp.com/oauth2/authorize?client_id=469088879207514132&scope=bot",
                               description="__**Compte rendu de la réunion du 29/07/2018**__")
@@ -99,7 +100,7 @@ async def on_message(message):
                          url="https://discordapp.com/oauth2/authorize?client_id=469088879207514132&scope=bot",
                          icon_url="https://cdn.discordapp.com/avatars/244807977373138956"
                                   "/df627cfadbc07dcc72c85ee83ff69a78.png?size=2048")
-        embed.set_footer(text=datetime.datetime.now.strftime("%Y-%m-%d %H:%M"),
+        embed.set_footer(text=datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
                          icon_url="https://cdn.discordapp.com/icons/289845545151889408"
                                   "/25a4223c378f0bea5ff1c743af739e14.png")
 
@@ -202,22 +203,22 @@ async def on_member_join(member):
     await client.send_message(channel, fmt.format(member, server))
 
 
-@client.event
-async def on_message_delete(message):
-    if message.author == client.user:
-        return
-    else:
-        fmt = '{0.author.name} has deleted the message:\n{0.content}'
-        await client.send_message(message.channel, fmt.format(message))
-
-
-@client.event
-async def on_message_edit(before, after):
-    if before.author == client.user:
-        return
-    else:
-        fmt = '**{0.author}** edited their message:\n{1.content}'
-        await client.send_message(after.channel, fmt.format(after, before))
+# @client.event
+# async def on_message_delete(message):
+#     if message.author == client.user:
+#         return
+#     else:
+#         fmt = '{0.author.name} has deleted the message:\n{0.content}'
+#         await client.send_message(message.channel, fmt.format(message))
+#
+#
+# @client.event
+# async def on_message_edit(before, after):
+#     if before.author == client.user:
+#         return
+#     else:
+#         fmt = '**{0.author}** edited their message:\n{1.content}'
+#         await client.send_message(after.channel, fmt.format(after, before))
 
 
 # client.loop.create_task(my_background_task())
