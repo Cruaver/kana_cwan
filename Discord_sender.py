@@ -107,30 +107,30 @@ async def on_message(message):
                                   "/25a4223c378f0bea5ff1c743af739e14.png")
 
         embed.add_field(name=":calendar: __Bilan de la semaine__ :",
-                        value="Nous avons eux les résultats des changements des salons comme vous pouvez le voir, "
-                              "nous remarquons que les nouveau système des salons a eux un petit impacte sur les "
-                              "salons vocal, cela est du grave au nouveau système, et de la participation des membres "
-                              "du serveur, nous les remercions fortement, qu’il continue ainsi. ",
+                        value="Nous avons eu les résultats des changements des salons comme vous pouvez le voir, "
+                              "nous remarquons que le nouveau système a eu un petit impact sur les salons vocaux, "
+                              "cela est dû a la participation des membres du serveur, nous les remercions fortement, "
+                              "qu’ils continuent ainsi.",
                         inline=True)
-        embed.add_field(name=":tada: __Les Nouveau Du Staff__ :",
-                        value="Nous avons introduit dans nôtres discord 2nouvelle personne dont : **Kana Chan** qui "
-                              "est **PRÉFETS** , nous espérons qu’il sera faire ce rôle comme il se "
-                              "doit.\n\n**Pleym** qui est **GRAPHS / MONTEURS**, avec ces talents incroyable nous "
-                              "espérons qu’il sera combler vos souhait pour nos streamer adorés "
-                              ":relaxed:\n\n**Skaeren** qui était déjà **ADMINISTRATEURS** dans notre discord, "
-                              "mais pour des raisons il à quitter, et il revient parmi nous, il est maintenant "
-                              "rétrogradé **MODERATEURS**, espérant qu’il redeviendra ce qu’il était avant.",
+        embed.add_field(name=":tada: __Les Nouveaux Du Staff__ :",
+                        value="Nous avons introduit dans notre discord 2 nouvelles personnes donc : **Kana Chan** qui "
+                              "est **PRÉFETS** , nous espérons qu’il saura faire ce rôle comme il se doit.\n\n"
+                              "**Pleym** qui est **GRAPHS / MONTEURS**, avec ses talents incroyables,"
+                              " nous espérons qu’il saura combler vos souhaits pour nos streamer adorés :relaxed:"
+                              "\n\n**Skaeren** qui était déjà **ADMINISTRATEURS** dans notre discord, "
+                              "revient parmi nous, il est maintenant "
+                              "rétrogradé **MODERATEURS**, espérant qu’il redeviendra **ADMINISTRATEURS**",
                         inline=True)
         embed.add_field(name=":gear: __Les Changement Du Staff__ :",
                         value="**Skygorter41** : Monté en **ADMINISTRATEURS** \n**Sei** : Monté en **CHEF "
                               "MODERATEUR**\n**Dala** : Rétrogradé en **MODERATEURS**")
+
         embed.add_field(name=":Zwin_NANI: __Les Changement Du Staff__ :",
-                        value="Nous espérons qu’il seront accomplir leur devoir qui a était donné. Voilà c’est tout "
-                              "pour ce débriefing, désoler si j’ai rater quelque chose ( Ah oui, nous avons chanter, "
-                              "**Skygorter41** et **Pleym** et **Sei** et **Kana Chan**, nous attendons que **Zwin** "
-                              "nous envoie la vidéo )A la prochaine réunion pour le prochain débriefing, "
-                              "sur ceux passer une agréable journée / soirée, et je vous souhaite d’agréer mes "
-                              "salutation distingués")
+                        value="Nous espérons qu’ils sauront accomplir leur devoir.  Voilà c’est tout "
+                              "pour ce débriefing, désolé si j’ai raté quelque chose ( Ah oui, nous avons chanté, "
+                              "**Skygorter41**, **Pleym**, **Sei** et **Kana Chan**, nous attendons que **Zwin** "
+                              "nous envoie la vidéo ). A la prochaine réunion pour le débriefing. "
+                              "Passez une agréable journée / soirée.")
 
         await client.send_message(message.channel, content="**Compte-rendu**", embed=embed)
 
