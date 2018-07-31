@@ -113,24 +113,25 @@ async def on_message(message):
                               "du serveur, nous les remercions fortement, qu’il continue ainsi. ",
                         inline=True)
         embed.add_field(name=":tada: __Les Nouveau Du Staff__ :",
-                        value="Nous avons introduit dans nôtres discord 2nouvelle personne dont : @🌺💖Kana "
-                              "Chan💖🌺#7440 qui est @👋 PRÉFETS 👋 , nous espérons qu’il sera faire ce rôle comme il "
-                              "se doit.\n\n@Pleym#2213 qui est @🖌🎨 GRAPHS / MONTEURS 🎨🖌 , avec ces talents "
-                              "incroyable nous espérons qu’il sera combler vos souhait pour nos streamer adorés "
-                              ":relaxed:\n\n@Skaeren#4624 qui était déjà @📙 ADMINISTRATEURS 📙  dans notre discord, "
+                        value="Nous avons introduit dans nôtres discord 2nouvelle personne dont : **Kana Chan** qui "
+                              "est **PRÉFETS** , nous espérons qu’il sera faire ce rôle comme il se "
+                              "doit.\n\n**Pleym** qui est **GRAPHS / MONTEURS**, avec ces talents incroyable nous "
+                              "espérons qu’il sera combler vos souhait pour nos streamer adorés "
+                              ":relaxed:\n\n**Skaeren** qui était déjà **ADMINISTRATEURS** dans notre discord, "
                               "mais pour des raisons il à quitter, et il revient parmi nous, il est maintenant "
-                              "rétrogradé @🔧 MODERATEURS 🔧 , espérant qu’il redeviendra ce qu’il était avant.",
+                              "rétrogradé **MODERATEURS**, espérant qu’il redeviendra ce qu’il était avant.",
                         inline=True)
         embed.add_field(name=":gear: __Les Changement Du Staff__ :",
-                        value="@Skygorter41#1152 : Monté en @📙 ADMINISTRATEURS 📙 \n@Sei#8698 : Monté en @🔧 CHEF "
-                              "MODERATEUR 🔧\n@Ikumi#0562 : Rétrogradé en @🔧 MODERATEURS 🔧")
+                        value="**Skygorter41** : Monté en **ADMINISTRATEURS** \n**Sei** : Monté en **CHEF "
+                              "MODERATEUR**\n**Dala** : Rétrogradé en **MODERATEURS**")
         embed.add_field(name=":Zwin_NANI: __Les Changement Du Staff__ :",
                         value="Nous espérons qu’il seront accomplir leur devoir qui a était donné. Voilà c’est tout "
                               "pour ce débriefing, désoler si j’ai rater quelque chose ( Ah oui, nous avons chanter, "
-                              "@Skygorter41#1152 et @Pleym#2213 et @Sei#8698 et @🌺💖Kana Chan💖🌺#7440, "
-                              "nous attendons que @Zwin#7322 nous envoie la vidéo )A la prochaine réunion pour le "
-                              "prochain débriefing, sur ceux passer une agréable journée / soirée, et je vous "
-                              "souhaite d’agréer mes salutation distingués")
+                              "**Skygorter41** et **Pleym** et **Sei** et **Kana Chan**, nous attendons que **Zwin** "
+                              "nous envoie la vidéo )A la prochaine réunion pour le prochain débriefing, "
+                              "sur ceux passer une agréable journée / soirée, et je vous souhaite d’agréer mes "
+                              "salutation distingués")
+
         await client.send_message(message.channel, content="**Compte-rendu**", embed=embed)
 
     if message.content.startswith('!hug'):
