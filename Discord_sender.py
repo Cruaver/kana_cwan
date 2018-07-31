@@ -2,6 +2,7 @@ import datetime
 import discord
 import asyncio
 import random
+import datetime
 
 client = discord.Client()
 
@@ -23,7 +24,6 @@ async def my_background_task():
         await client.send_message(channel, "No fake")
         await asyncio.sleep(5)
 
-
 @client.event
 async def on_message(message):
     if message.author == client.user:
@@ -41,7 +41,7 @@ async def on_message(message):
                          url="https://discordapp.com/oauth2/authorize?client_id=469088879207514132&scope=bot",
                          icon_url="https://cdn.discordapp.com/avatars/222139815980695552"
                                   "/ecb5a324d354fcfe92ba3e2ae99b32df.png?size=2048")
-        embed.set_footer(text="18 juillet 2018 à 14h50",
+        embed.set_footer(text=datetime.datetime.now.strftime("%Y-%m-%d %H:%M"),
                          icon_url="https://scontent-ams3-1.cdninstagram.com/vp/8ec180462bdc5f880ae2f908b43b0ccf"
                                   "/5BDC9FCF/t51.2885-19/s320x320/26065436_154405111872446_8536586386604556288_n.jpg")
 
@@ -74,7 +74,7 @@ async def on_message(message):
                          url="https://discordapp.com/oauth2/authorize?client_id=469088879207514132&scope=bot",
                          icon_url="https://cdn.discordapp.com/avatars/222139815980695552"
                                   "/ecb5a324d354fcfe92ba3e2ae99b32df.png?size=2048")
-        embed.set_footer(text="18 juillet 2018 à 14h50",
+        embed.set_footer(text=datetime.datetime.now.strftime("%Y-%m-%d %H:%M"),
                          icon_url="https://scontent-ams3-1.cdninstagram.com/vp/8ec180462bdc5f880ae2f908b43b0ccf"
                                   "/5BDC9FCF/t51.2885-19/s320x320/26065436_154405111872446_8536586386604556288_n.jpg")
 
@@ -87,6 +87,48 @@ async def on_message(message):
                         inline=True)
 
         await client.send_message(message.channel, content="**RÈGLEMENT**", embed=embed)
+
+    if message.content.startswith('!GR_Rendu'):
+        embed = discord.Embed(colour=discord.Colour(0xff0000),
+                              url="https://discordapp.com/oauth2/authorize?client_id=469088879207514132&scope=bot",
+                              description="__**Compte rendu de la réunion du 29/07/2018**__")
+
+        embed.set_thumbnail(
+            url="https://cdn.discordapp.com/icons/289845545151889408/25a4223c378f0bea5ff1c743af739e14.png")
+        embed.set_author(name="Skygorter41",
+                         url="https://discordapp.com/oauth2/authorize?client_id=469088879207514132&scope=bot",
+                         icon_url="https://cdn.discordapp.com/avatars/244807977373138956"
+                                  "/df627cfadbc07dcc72c85ee83ff69a78.png?size=2048")
+        embed.set_footer(text=datetime.datetime.now.strftime("%Y-%m-%d %H:%M"),
+                         icon_url="https://cdn.discordapp.com/icons/289845545151889408"
+                                  "/25a4223c378f0bea5ff1c743af739e14.png")
+
+        embed.add_field(name=":calendar: __Bilan de la semaine__ :",
+                        value="Nous avons eux les résultats des changements des salons comme vous pouvez le voir, "
+                              "nous remarquons que les nouveau système des salons a eux un petit impacte sur les "
+                              "salons vocal, cela est du grave au nouveau système, et de la participation des membres "
+                              "du serveur, nous les remercions fortement, qu’il continue ainsi. ",
+                        inline=True)
+        embed.add_field(name=":tada: __Les Nouveau Du Staff__ :",
+                        value="Nous avons introduit dans nôtres discord 2nouvelle personne dont : @🌺💖Kana "
+                              "Chan💖🌺#7440 qui est @👋 PRÉFETS 👋 , nous espérons qu’il sera faire ce rôle comme il "
+                              "se doit.\n\n@Pleym#2213 qui est @🖌🎨 GRAPHS / MONTEURS 🎨🖌 , avec ces talents "
+                              "incroyable nous espérons qu’il sera combler vos souhait pour nos streamer adorés "
+                              ":relaxed:\n\n@Skaeren#4624 qui était déjà @📙 ADMINISTRATEURS 📙  dans notre discord, "
+                              "mais pour des raisons il à quitter, et il revient parmi nous, il est maintenant "
+                              "rétrogradé @🔧 MODERATEURS 🔧 , espérant qu’il redeviendra ce qu’il était avant.",
+                        inline=True)
+        embed.add_field(name=":gear: __Les Changement Du Staff__ :",
+                        value="@Skygorter41#1152 : Monté en @📙 ADMINISTRATEURS 📙 \n@Sei#8698 : Monté en @🔧 CHEF "
+                              "MODERATEUR 🔧\n@Ikumi#0562 : Rétrogradé en @🔧 MODERATEURS 🔧")
+        embed.add_field(name=":Zwin_NANI: __Les Changement Du Staff__ :",
+                        value="Nous espérons qu’il seront accomplir leur devoir qui a était donné. Voilà c’est tout "
+                              "pour ce débriefing, désoler si j’ai rater quelque chose ( Ah oui, nous avons chanter, "
+                              "@Skygorter41#1152 et @Pleym#2213 et @Sei#8698 et @🌺💖Kana Chan💖🌺#7440, "
+                              "nous attendons que @Zwin#7322 nous envoie la vidéo )A la prochaine réunion pour le "
+                              "prochain débriefing, sur ceux passer une agréable journée / soirée, et je vous "
+                              "souhaite d’agréer mes salutation distingués")
+        await client.send_message(message.channel, content="**Compte-rendu**", embed=embed)
 
     if message.content.startswith('!hug'):
         embed = discord.Embed(title="Love", colour=discord.Colour(0xff0000), url="https://discordapp.com",
