@@ -17,7 +17,7 @@ idna==2.6
 ipfsapi==0.4.2.post1
 itsdangerous==0.24
 jdcal==1.4
-Jinja2==2.10
+Jinja2==2.11.3
 MarkupSafe==1.0
 multidict==4.3.1
 numpy==1.14.2
