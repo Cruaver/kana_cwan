@@ -31,7 +31,7 @@ requests==2.18.4
 self==0.0.27
 six==1.11.0
 urllib3==1.22
-websockets==3.4
+websockets==9.1
 Werkzeug==0.14.1
 xlrd==1.1.0
 xlutils==2.0.0
